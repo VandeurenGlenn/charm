@@ -10,7 +10,9 @@ fi
 sudo chmod +x xdotool
 sudo mv xdotool /usr/local/bin
 sudo mv libxdo.so.3 /usr/local/lib
+sudo mv libxdo.so /usr/local/lib
 
 echo Cleaning up...
 sudo rm xdotool.tar.gz
-echo Installed successfully. 
+echo Installed successfu
+lly. 

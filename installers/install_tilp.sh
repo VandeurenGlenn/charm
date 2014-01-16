@@ -1,3 +1,10 @@
+arch=$(arch)
+if [ "$arch" != "armv7l" ]; then
+	echo "Your Chromebook does not have an ARM processor."
+	echo "TiLP has not yet been ported to x86."
+	exit
+fi
+
 echo Downloading...
 cd ~/Downloads
 wget raw.github.com/amihart/charm/master/files/tilp2.tar.gz

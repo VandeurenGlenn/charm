@@ -8,21 +8,21 @@ using namespace std;
 int main(int argc, char* args[]) {
 	if (argc < 2) {
 		cout << "Please specify an application name.\n";
-		return 0;	
+		return 0;
 	}
 	cout << "Fetching list...\n";
-	system("wget -N raw.github.com/amihart/charm/master/files/list --quiet");	
+	system("wget -N raw.github.com/vandeurenglenn/charm/master/files/list --quiet");
 
 
 
 	cout << "Reading application list...\n";
 	string line;
-	string package = args[1];	
-	bool isInList = false;	
+	string package = args[1];
+	bool isInList = false;
 	string packlist = "";
 	ifstream list("list");
 	while (getline(list,line)) {
-		if (line.substr(0,line.length()-1) == package) 
+		if (line.substr(0,line.length()-1) == package)
 			isInList = true;
 		packlist += line.substr(0,line.length()-1) + "\n";
 	}
@@ -40,7 +40,7 @@ int main(int argc, char* args[]) {
 		cout << "Available applications:\n" << packlist;
 	} else {
 		cout << "Downloading installer...\n";
-		string cmd = "wget raw.github.com/amihart/charm/master/installers/";
+		string cmd = "wget raw.github.com/vandeurenglenn/charm/master/installers/";
 		cmd += package;
 		cmd += ".sh --quiet";
 		system(cmd.c_str());

@@ -1,5 +1,5 @@
 echo Downloading charm...
-sudo wget -N raw.github.com/vandeurenglenn/charm/master/charm --quiet
+sudo wget -N raw.github.com/vandeurenglenn/charm/preview/charm --quiet
 sudo chmod +x charm
 echo Installing charm...
 sudo mv ./charm /usr/local/bin/charm

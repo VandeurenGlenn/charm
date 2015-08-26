@@ -2,5 +2,5 @@ echo Downloading charm...
 sudo wget -N raw.github.com/amihart/charm/master/charm --quiet
 sudo chmod +x charm
 echo Installing charm...
-sudo mv ./charm /usr/local/bin
+sudo mv ./charm /usr/local/bin/charm
 echo Installation complete.
